@@ -6,13 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "dev-docker": "npm install && npm run dev"
+    "dev-docker": "npm install && npm run dev",
+    "start": "docker-compose run app npm run dev-docker",
+    "docker-npm": "docker-compose run --rm app npm"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "babel-preset-stage-3": "^6.5.0",
-    "babel-register": "^6.8.0"
+    "babel-register": "^6.8.0",
+    "cheerio": "^0.20.0",
+    "html-minifier": "^2.1.2",
+    "request-promise": "^3.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.9.1"
